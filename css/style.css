@@ -221,6 +221,162 @@ html {
     background: #eee0c9;
 }
 
+/* hero */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 20rem;;
+    position: relative;
+}
+
+.hero__photo-wrapper {
+    position: absolute;
+    top: 50%;
+    margin-top: -318px;
+    left: 50%;
+    margin-left: -384.5px;
+    z-index: -1;
+}
+
+.hero__photo {
+    z-index: 0;
+}
+
+.hero__photo-shadow {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    margin-left: -286px;
+    z-index: -1;
+}
+
+.hero__text-wrapper {
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 3;
+    padding: 3rem 0;
+}
+
+.hero__title {
+    color: #586967;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    letter-spacing: 2.4px;
+    margin: 0;
+}
+
+.hero__big-paragraph {
+    color: #333d3c;
+    font-size: 6rem;
+    font-weight: bold;
+    letter-spacing: 8px;
+    margin: 3rem 0;
+}
+
+.hero__btn {
+    color: #fff;
+    font-size: 1.6rem;
+    letter-spacing: 2.4px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 4rem;
+}
+
+.draw-border {
+    box-shadow: inset 0 0 0 2px #fff;
+    color: #fff;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.draw-border::before, .draw-border::after {
+    content: "";
+    box-sizing: border-box;
+    border: 0 solid transparent;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.draw-border::before {
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.draw-border::after {
+    border-top-width: 2px;
+    border-right-width: 2px;
+}
+
+.draw-border:hover {
+    color: #333d3c;
+}
+
+.draw-border:hover::before, .draw-border:hover::after {
+    border-color: #333d3c;
+    transition: border-color 0s, width 0.3s, height 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+.draw-border:hover::before {
+    transition-delay: 0s, 0s, 0.3s;
+}
+
+.draw-border:hover::after {
+    transition-delay: 0s, 0.3s, 0s;
+}
+
+.scroll-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll {
+    padding: 60px;
+    color: #333d3c;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    position: relative;
+}
+
+.scroll::before, .scroll::after {
+    content: "";
+    width: 2px;
+    height: 60px;
+    background-color: #333d3c;
+    position: absolute;
+    left: 50%;
+    transition: all 1s;
+}
+
+.scroll::before {
+    /* top: 55px; */
+    top: 85px;
+}
+
+.scroll:hover::before {
+    top: -5px;
+}
+
+.scroll::after {
+    bottom: -60px;
+}
+
+.scroll:hover::after {
+    bottom: -5px;
+}
+
 /* footer */
 .footer {
     padding: 3rem 0;
@@ -369,4 +525,16 @@ notebook
 fonts:
 font-family: "sofia-pro", sans-serif;
 font-family: "ff-good-headline-web-pro-ext", sans-serif;
+
+do HTML na parallax <!-- <div id="parallax"></div> -->
+#parallax {
+    position: relative;
+    width: 1000px;
+    height: 636px;
+    background-image: url("../img/box.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: 50% 50%;
+    z-index: -3;
+}
 */
