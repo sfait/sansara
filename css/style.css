@@ -1,0 +1,48 @@
+/* general */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: "ff-good-headline-web-pro-ext", "Arial", sans-serif;
+}
+
+html {
+    background: lightblue url("../img/background-gradient.png") no-repeat center bottom;
+    background-size: cover;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    margin: -1px !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+/* media queries*/
+@media only screen and (min-width: 990px) {}
+
+/*
+notebook
+fonts:
+font-family: "sofia-pro", sans-serif;
+font-family: "ff-good-headline-web-pro-ext", sans-serif;
+*/
