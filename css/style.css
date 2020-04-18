@@ -223,49 +223,41 @@ html {
 
 /* hero */
 .hero {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 0 20rem;;
-    position: relative;
-}
-
-.hero__photo-wrapper {
-    position: absolute;
-    top: 50%;
-    margin-top: -318px;
-    left: 50%;
-    margin-left: -384.5px;
-    z-index: -1;
-}
-
-.hero__photo {
-    z-index: 0;
-}
-
-.hero__photo-shadow {
-    position: absolute;
-    top: 65%;
-    left: 40%;
-    margin-left: -286px;
-    z-index: -1;
+    padding: 6rem 0;
 }
 
 .hero__text-wrapper {
+    width: 100%;
+    height: 400px;
     text-transform: uppercase;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    z-index: 3;
-    padding: 3rem 0;
+    background: url("../img/box.png") no-repeat bottom/contain;
+    position: relative;
+}
+
+.hero__text-wrapper::after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: url("../img/box-shadow.png") no-repeat center/contain;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    z-index: -3;
 }
 
 .hero__title {
     color: #586967;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: lighter;
     letter-spacing: 2.4px;
     margin: 0;
@@ -273,10 +265,10 @@ html {
 
 .hero__big-paragraph {
     color: #333d3c;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 8px;
-    margin: 3rem 0;
+    margin: 1.5rem 0;
 }
 
 .hero__btn {
@@ -284,7 +276,7 @@ html {
     font-size: 1.6rem;
     letter-spacing: 2.4px;
     padding: 0.5rem 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 .draw-border {
@@ -339,6 +331,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    display: none;
 }
 
 .scroll {
@@ -361,7 +354,6 @@ html {
 }
 
 .scroll::before {
-    /* top: 55px; */
     top: 85px;
 }
 
@@ -482,6 +474,24 @@ html {
         background: transparent;
         top: 2.5rem;
         right: 1.5rem;
+    }
+
+    /* hero */
+    .hero__text-wrapper {
+        height: 700px;
+    }
+
+    .hero__title {
+        font-size: 1.6rem;
+    }
+
+    .hero__big-paragraph {
+        font-size: 6rem;
+        margin: 3rem 0;
+    }
+
+    .scroll-wrapper {
+        display: block;
     }
 
     /* footer */
