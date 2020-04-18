@@ -17,8 +17,22 @@ function changeTitle() {
     })
 }
 
+function showHamburgerMenu() {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector(".navigation");
+
+    const handleClick = function() {
+        hamburger.classList.toggle("hamburger--active");
+        hamburger.setAttribute("aria-expanded", hamburger.classList.contains("hamburger--active"));
+        nav.classList.toggle("navigation--active");
+    }
+
+    hamburger.addEventListener("click", handleClick);
+}
+
 const init = function() {
     changeTitle();
+    showHamburgerMenu();
 };
 
 document.addEventListener("DOMContentLoaded", init);
