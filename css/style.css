@@ -220,6 +220,79 @@ html {
     background: #eee0c9;
 }
 
+/* footer */
+.footer {
+    padding: 3rem 0;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__first-logo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__social-icons {
+    margin: 2rem 0 1rem;
+}
+
+.social-icons__link--opacity {
+    opacity: 0.8;
+}
+
+.footer-navigation {
+    margin: 1rem 0 1.5rem;
+    padding: 0;
+    text-transform: uppercase;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-navigation__item {
+    margin: 0.4rem 0;
+    position: relative;
+}
+
+.footer-navigation__item:first-of-type {
+    margin-left: 0;
+}
+
+.footer-navigation__item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #333d3c;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: all 0.3s;
+}
+
+.footer-navigation__item:hover::after {
+    width: 100%;
+}
+
+.footer-navigation__link {
+    color: #333d3c;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+}
+
+.footer__second-logo {
+    width: 100%;
+    text-align: center;
+}
+
 /* media queries*/
 @media only screen and (min-width: 900px) {
 
@@ -252,6 +325,41 @@ html {
         background: transparent;
         top: 2.5rem;
         right: 1.5rem;
+    }
+
+    /* footer */
+    .footer {
+        padding: 1rem 3rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__first-logo {
+        width: 20%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer__social-icons {
+        margin: 0;
+    }
+
+    .footer-navigation {
+        margin: 0;
+        flex-direction: row;
+    }
+
+    .footer-navigation__item {
+        margin: 0 0.8rem;
+    }
+
+    .footer-navigation__link {
+        font-size: 1rem;
+    }
+
+    .footer__second-logo {
+        width: 15%;
+        text-align: right;
     }
 }
 
