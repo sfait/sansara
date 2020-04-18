@@ -109,7 +109,7 @@ html {
     margin: 0;
     background-color: transparent;
     z-index: 3;
-    position: absolute;
+    position: fixed;
     top: 2.5rem;
     right: 1.5rem;
 }
@@ -235,7 +235,6 @@ html {
     /* navigation */
     .hamburger {
         background-color: #333d3c;
-        position: fixed;
         top: 50%;
         right: 0;
     }
