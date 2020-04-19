@@ -91,7 +91,7 @@ body {
     content: "";
     width: 0;
     height: 2px;
-    background: #333d3c;
+    background-color: #333d3c;
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -122,7 +122,7 @@ body {
 }
 
 .hamburger--active {
-    background: transparent;
+    background-color: transparent;
 }
 
 .hamburger__box {
@@ -209,7 +209,7 @@ body {
 
 .navigation__link {
     width: 100%;
-    background: #caf2f1;
+    background-color: #caf2f1;
     color: #333d3c;
     font-size: 2rem;
     text-align: center;
@@ -220,7 +220,7 @@ body {
 }
 
 .navigation__link:hover {
-    background: #eee0c9;
+    background-color: #eee0c9;
 }
 
 /* hero */
@@ -377,9 +377,12 @@ body {
 }
 
 /* about-us */
-.about-us {}
+.about-us {
+    padding: 0;
+}
 
-.about-us__top-wrapper {
+.about-us__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -477,7 +480,103 @@ body {
 }
 
 .member__btn:hover {
-    background: #333d3c;
+    background-color: #333d3c;
+}
+
+/* mission */
+.slider__wrapper {
+    width: 100%;
+    min-height: 215px;
+    padding: 0.5rem 2rem;
+    background-color: rgba(255, 242, 221, 0.62);
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.slider__paragraph {
+    width: 100%;
+    opacity: 0.49;
+    color: #455251;
+    font-family: "sofia-pro", "Arial", sans-serif;
+    font-size: 0.9rem;
+    line-height: 18px;
+    letter-spacing: 0.07px;
+    text-align: center;
+}
+
+.slider__headers {
+    width: 100%;
+    height: 100%;
+    margin: 1rem 0 0.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider__headers::after {
+    content: "";
+    width: 1px;
+    height: 180%;
+    background-color: #333d3c;
+    position: absolute;
+    top: -40%;
+    left: -2rem;
+    display: none;
+}
+
+.slider__btn-header {
+    width: 200px;
+    color: #333d3c;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    margin: 0;
+    text-align: left;
+    border: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+}
+
+.slider__btn-header--active {
+    font-size: 3rem;
+}
+
+.slider__span {
+    margin-right: 0.5rem;
+}
+
+.slider__btn {
+    width: 30px;
+    height: 30px;
+    background-color: #bab8ac;
+    border-radius: 50%;
+    border: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    display: none;
+}
+
+.slider__icon {
+    width: 8px;
+    height: 15px;
+    color: #ffffff;
+}
+
+.slider__btn:hover {
+    background-color: #333d3c;
 }
 
 /* footer */
@@ -530,7 +629,7 @@ body {
     content: "";
     width: 0;
     height: 2px;
-    background: #333d3c;
+    background-color: #333d3c;
     position: absolute;
     left: 0;
     bottom: -4px;
@@ -582,7 +681,7 @@ body {
     }
 
     .hamburger--active {
-        background: transparent;
+        background-color: transparent;
         top: 2.5rem;
         right: 1.5rem;
     }
@@ -606,7 +705,11 @@ body {
     }
 
     /* about-us */
-    .about-us__top-wrapper {
+    .about-us {
+        padding: 5rem 0;
+    }
+
+    .about-us__wrapper {
         flex-direction: row;
         justify-content: space-between;
     }
@@ -621,6 +724,34 @@ body {
         width: 50%;
         justify-content: flex-start;
         margin-top: 0;
+    }
+
+    /* mission */
+    .slider__wrapper {
+        width: 90%;
+        flex-direction: row;
+    }
+
+    .slider__paragraph {
+        width: 50%;
+    }
+
+    .slider__headers {
+        width: 50%;
+        margin: 0 3rem;
+        align-items: flex-start;
+    }
+
+    .slider__btn-header {
+        text-align: left;
+    }
+
+    .slider__headers::after {
+        display: block;
+    }
+
+    .slider__btn {
+        display: block;
     }
 
     /* footer */
