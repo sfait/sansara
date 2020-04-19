@@ -104,8 +104,8 @@ body {
 
 /* navigation */
 .hamburger {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 45px;
     display: inline-block;
     cursor: pointer;
     border: 0;
@@ -134,7 +134,7 @@ body {
 
 .hamburger__inner {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #333d3c;
     position: absolute;
     left: 0;
@@ -146,7 +146,7 @@ body {
 .hamburger__inner::before,
 .hamburger__inner::after {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #333d3c;
     position: absolute;
     content: "";
@@ -209,7 +209,6 @@ body {
 
 .navigation__link {
     width: 100%;
-    text-decoration: none;
     background: #caf2f1;
     color: #333d3c;
     font-size: 2rem;
@@ -217,7 +216,7 @@ body {
     margin-bottom: 1rem;
     padding: 0.2rem 0;
     line-height: 1.5;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s;
 }
 
 .navigation__link:hover {
@@ -267,6 +266,7 @@ body {
 }
 
 .hero__big-paragraph {
+    width: 100%;
     color: #333d3c;
     font-size: 3rem;
     font-weight: bold;
@@ -330,47 +330,52 @@ body {
     transition-delay: 0s, 0.3s, 0s;
 }
 
-.scroll-wrapper {
+.scroll {
     display: flex;
     align-items: center;
     justify-content: center;
     display: none;
 }
 
-.scroll {
+.scroll__item {
     padding: 60px;
     color: #333d3c;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 1.8px;
     position: relative;
+    transition: all 0.3s;
 }
 
-.scroll::before, .scroll::after {
+.scroll__item:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.scroll__item::before,
+.scroll__item::after {
     content: "";
     width: 2px;
-    height: 60px;
-    background-color: #333d3c;
     position: absolute;
+    top: 100px;
     left: 50%;
     transition: all 1s;
 }
 
-.scroll::before {
-    top: 85px;
+.scroll__item::before {
+    height: 121px;
+    background-color: #333d3c;
 }
 
-.scroll:hover::before {
-    top: -5px;
+.scroll__item::after {
+    height: 0;
+    background-color: #fff;
 }
 
-.scroll::after {
-    bottom: -60px;
+.scroll__item:hover::after {
+    height: 121px;
 }
 
-.scroll:hover::after {
-    bottom: -5px;
-}
 
 /* footer */
 .footer {
@@ -493,7 +498,7 @@ body {
         margin: 3rem 0;
     }
 
-    .scroll-wrapper {
+    .scroll {
         display: block;
     }
 

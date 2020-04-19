@@ -31,7 +31,6 @@ function showHamburgerMenu() {
 }
 
 function useParallax() {
-    document.addEventListener("mousemove", parallax);
     const elem = document.querySelector("#parallax");
 
     function parallax(e) {
@@ -44,6 +43,8 @@ function useParallax() {
         const x = "".concat(depth2, ", ").concat(depth1);
         elem.style.backgroundPosition = x;
     }
+
+    document.addEventListener("mousemove", parallax);
 }
 
 const init = function() {
