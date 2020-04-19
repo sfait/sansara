@@ -409,9 +409,12 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.8px;
+}
+
+.sup-number--for-title {
     position: absolute;
     top: 20%;
-    margin-left: 0;
+    margin-left: 5%;
 }
 
 .about-us__second-logo-background {
@@ -587,6 +590,119 @@ body {
     background-color: #333d3c;
 }
 
+/* why-us */
+.why-us__header-wrapper {
+    padding: 2rem 0 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333d3c;
+    font-size: 3rem;
+    letter-spacing: 12px;
+    margin: 0 0 1rem;
+    position: relative;
+}
+
+.sup-number--for-title {
+    position: absolute;
+    top: 30%;
+    right: -2%;
+}
+
+.why-us__paragraph {
+    color: #868782;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 24px;
+    letter-spacing: 1.6px;
+    text-align: center;
+}
+
+/* portfolio */
+.portfolio__wrapper {
+    width: 100%;
+    background-color: rgba(255, 242, 221, 0.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 0.4rem;
+}
+
+.section__small-title {
+    color: #333d3c;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4.8px;
+    position: relative;
+    margin: 0;
+}
+
+.sup-number--for-small-title {
+    position: absolute;
+    top: 30%;
+}
+
+.section__paragraph {
+    color: #868782;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    text-align: center;
+    margin: 2.5rem 0;
+}
+
+.section__btn {
+    background-color: #bab8ac;
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding: 0.2rem 0.8rem;
+    transition: background 0.3s, color: 0.3s;
+}
+
+/* offer */
+.offer__wrapper {
+    width: 100%;
+    background-color: #86857d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.5rem 0.4rem;
+    box-shadow: -6px 11px 29px rgba(21, 53, 52, 0.14);
+}
+
+.section__small-title--offer {
+    color: #fff;
+}
+
+.sup-number--offer {
+    color: #bab8ac;
+}
+
+.section__paragraph--offer {
+    color: #fff;
+}
+
+.section__btn--offer {
+    border: 2px solid #cbf2f0;
+    background-color: #cbf2f0;
+    color: #333d3c;
+}
+
 /* footer */
 .footer {
     padding: 3rem 0;
@@ -760,6 +876,35 @@ body {
 
     .slider__btn {
         display: block;
+    }
+
+    /* why-us */
+    .section__title {
+        font-size: 5rem;
+        letter-spacing: 24px;
+        margin: 0 0 2rem;
+    }
+
+    /* portfolio-offer-wrapper */
+    .portfolio-offer-wrapper {
+        width: 100%;
+        height: 600px;
+        position: relative;
+    }
+
+    /* portfolio */
+    .portfolio__wrapper {
+        width: 50%;
+        position: absolute;
+        top: 0;
+    }
+
+    /* offer */
+    .offer {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
     }
 
     /* footer */
