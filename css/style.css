@@ -12,7 +12,7 @@ html, body {
 }
 
 html {
-    background: #caf2f1 url("../img/background-gradient.png") no-repeat center center;
+    background: #caf2f1 url("../img/background-gradient.png") repeat top center;
     background-size: cover;
 }
 
@@ -376,6 +376,109 @@ body {
     height: 121px;
 }
 
+/* about-us */
+.about-us {}
+
+.about-us__top-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.about-us__logos-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-us__logo-wrapper {
+    margin: 2.5rem 0;
+    position: relative;
+}
+
+.sup-number {
+    color: #868782;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    position: absolute;
+    top: 20%;
+    margin-left: 0;
+}
+
+.about-us__second-logo-background {
+    position: absolute;
+    bottom: -100%;
+    left: -10%;
+    z-index: -1;
+}
+
+.about-us__text-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.about-us__paragraph {
+    color: #868782;
+    font-size: 0.9rem;
+    line-height: 20px;
+    letter-spacing: 0.07px;
+    font-family: "sofia-pro", "Arial", sans-serif;
+    margin-bottom: 2rem;
+}
+
+.about-us__member {
+    max-width: 650px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0.5rem 0;
+    line-height: 30px;
+}
+
+.member__position {
+    color: #868782;
+    font-size: 1rem;
+    letter-spacing: 1.6px;
+}
+
+.member__underline {
+    flex-grow: 1;
+    border-bottom: 1px solid #333d3c;
+}
+
+.member__name {
+    color: #333d3c;
+    font-size: 1.5rem;
+    letter-spacing: 2.4px;
+    text-align: right;
+}
+
+.member__btn {
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 2.4px;
+    background-color: #bab8ac;
+    padding: 0 0.3rem;
+    margin-left: 0;
+    transition: background 0.3s;
+}
+
+.member__btn:hover {
+    background: #333d3c;
+}
 
 /* footer */
 .footer {
@@ -502,6 +605,24 @@ body {
         display: block;
     }
 
+    /* about-us */
+    .about-us__top-wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .about-us__logos-wrapper {
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .about-us__text-wrapper {
+        width: 50%;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
     /* footer */
     .footer {
         padding: 1rem 3rem;
@@ -535,6 +656,20 @@ body {
     .footer__second-logo {
         width: 15%;
         text-align: right;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+
+    /* about-us */
+    .about-us__member {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .member__btn {
+        margin-left: 0.5rem;
     }
 }
 
