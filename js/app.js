@@ -30,6 +30,24 @@ function showHamburgerMenu() {
     hamburger.addEventListener("click", handleClick);
 }
 
+function changeSlide() {
+    const sliderParagraphs = document.querySelectorAll(".slider__paragraph");
+    const sliderButtonsHeader = document.querySelectorAll(".slider__btn-header");
+    const sliderButton = document.querySelector(".slider__btn");
+
+    for (let i = 0; i < sliderButtonsHeader.length; i++) {
+        sliderButtonsHeader[i].addEventListener("click", function() {
+            this.classList.add("slider__btn-header--active");
+        })
+    }
+
+    // sliderButton.addEventListener("click", function() {
+    //     console.log("hello")
+    // })
+
+
+}
+
 function useParallax() {
     const elem = document.querySelector("#parallax");
 
@@ -50,6 +68,7 @@ function useParallax() {
 const init = function() {
     changeTitle();
     showHamburgerMenu();
+    // changeSlide();
     // useParallax();
 };
 
