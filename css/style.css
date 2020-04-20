@@ -12,7 +12,7 @@ html, body {
 }
 
 html {
-    background: #caf2f1 url("../img/background-gradient.png") repeat center center;
+    background: #caf2f1 url("../img/background-gradient.png") repeat center top;
     background-size: cover;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .wrapper {
-    width: 80%;
+    width: 90%;
     max-width: 1250px;
     margin: 0 auto;
 }
@@ -626,16 +626,20 @@ body {
     text-align: center;
 }
 
-.benefits__wrapper {}
+.benefits__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: center;
+}
 
 .benefits__item {
     width: 100%;
-    background: pink;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0;
+    margin: 1rem 0;
     padding: 0.5rem;
 }
 
@@ -779,6 +783,7 @@ body {
 .contact__wrapper {
     display: flex;
     flex-direction: column-reverse;
+    padding: 2rem 0;
 }
 
 .contact__form {
@@ -955,6 +960,10 @@ body {
 
 /* media queries*/
 @media only screen and (min-width: 900px) {
+    /* general */
+    .wrapper {
+        width: 80%;
+    }
 
     /* header */
     .header__social-icons {
@@ -1056,6 +1065,11 @@ body {
     }
 
     /* why-us */
+    .why-us {
+        padding: 3rem 0;
+        margin-bottom: 8rem;
+    }
+
     .section__title {
         font-size: 5rem;
         letter-spacing: 24px;
@@ -1070,10 +1084,41 @@ body {
         width: 75%;
         flex-direction: row;
         justify-content: space-between;
+        margin: 0;
     }
 
     .benefits__item--column-reverse {
         flex-direction: row;
+    }
+
+    .benefits__item--comfort {
+        align-self: flex-start;
+    }
+
+    .benefits__item--security {
+        max-width: 60%;
+        align-self: flex-end;
+    }
+
+    .benefits__item--appreciation {
+        max-width: 55%;
+        align-self: flex-start;
+    }
+
+    .benefits__item--counting-down {
+        max-width: 55%;
+        align-self: flex-end;
+        margin: 1rem 0 2rem;
+    }
+
+    .benefits__item--enthusiasm {
+        max-width: 90%;
+        align-self: flex-start;
+    }
+
+    .benefits__item--success {
+        max-width: 50%;
+        align-self: flex-end;
     }
 
     .benefits__photo-wrapper {
