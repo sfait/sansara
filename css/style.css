@@ -12,7 +12,7 @@ html, body {
 }
 
 html {
-    background: #caf2f1 url("../img/background-gradient.png") repeat top center;
+    background: #caf2f1 url("../img/background-gradient.png") repeat center center;
     background-size: cover;
 }
 
@@ -411,7 +411,7 @@ body {
     letter-spacing: 1.8px;
 }
 
-.sup-number--for-title {
+.sup-number--for-logo {
     position: absolute;
     top: 20%;
     margin-left: 5%;
@@ -576,6 +576,7 @@ body {
     transition: background 0.3s;
     position: absolute;
     top: 50%;
+    margin-top: -15px;
     right: 2rem;
     display: none;
 }
@@ -612,8 +613,7 @@ body {
 
 .sup-number--for-title {
     position: absolute;
-    top: 30%;
-    right: -2%;
+    top: 20%;
 }
 
 .why-us__paragraph {
@@ -709,9 +709,78 @@ body {
 }
 
 .section__btn--offer:hover {
-    border-color:  #bab8ac;
+    border-color: #bab8ac;
     background-color: #bab8ac;
     color: #ffffff;
+}
+
+/* contact */
+.contact__form {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__title {
+    color: #333d3c;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 9.6px;
+    text-align: center;
+    padding: 2.5rem;
+    margin: 0;
+}
+
+.form__item-wrapper {
+    width: 90%;
+    margin: 0.6rem 0;
+}
+
+.form__item-wrapper:nth-of-type(1) {
+    margin: 0 0 0.6rem;
+}
+
+.form__item {
+    width: 100%;
+    background: transparent;
+    border: transparent;
+    font-size: 0.8rem;
+    color: #868782;
+    font-family: "sofia-pro", "Arial", sans-serif;
+    line-height: 18px;
+    letter-spacing: 0.06px;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(51, 61, 60, 0.48);
+    text-align: center;
+}
+
+.form__input--resize {
+    resize: vertical;
+}
+
+.form__btn-wrapper {
+    margin: 1rem 0 2rem;
+}
+
+.form__btn {
+    background-color: #bab8ac;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    border: transparent;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: background 0.6s, color 0.3s;
+}
+
+.form__btn:hover {
+    background-color: #cbf2f0;
+    color: #333d3c;
 }
 
 /* footer */
@@ -896,10 +965,15 @@ body {
         margin: 0 0 2rem;
     }
 
+    .sup-number--for-title {
+        top: 30%;
+    }
+
     /* portfolio-offer-wrapper */
     .portfolio-offer-wrapper {
         width: 100%;
         height: 600px;
+        margin-bottom: 4rem;
         position: relative;
     }
 

@@ -217,6 +217,28 @@
         <section class="contact">
             <div class="wrapper">
                 <div class="contact__wrapper">
+                    <form class="contact__form">
+                        <h3 class="form__title">Masz pytania?</h3>
+                        <div class="form__item-wrapper">
+                            <label for="name" class="sr-only">Imię i nazwisko</label>
+                            <input type="text" maxlength="80" placeholder="imię i nazwisko" required class="form__item" id="name" />
+                        </div>
+                        <div class="form__item-wrapper">
+                            <label for="email" class="sr-only">Adres e-mail</label>
+                            <input type="email" placeholder="e-mail" required class="form__item" id="email" />
+                        </div>
+                        <div class="form__item-wrapper">
+                            <label for="phone" class="sr-only">Numer telefonu</label>
+                            <input type="tel" placeholder="numer telefonu" required class="form__item" id="phone" />
+                        </div>
+                        <div class="form__item-wrapper">
+                            <label for="message" class="sr-only">Treść wiadomości</label>
+                            <textarea placeholder="treść wiadomości" required class="form__item form__input--resize" id="message"></textarea>
+                        </div>
+                        <div class="form__btn-wrapper">
+                            <button class="form__btn" type="submit">Wyślij</button>
+                        </div>
+                    </form>
                     <h2 class="section__small-title">
                         Kontakt
                         <sup class="sup-number sup-number--for-small-title">05</sup>
