@@ -13,7 +13,7 @@ html, body {
 }
 
 html {
-    background: #caf2f1 url("../img/background-gradient.png") repeat center bottom;
+    background: #caf2f1 url("../img/background-gradient.png") repeat right top;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -60,6 +60,7 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    position: relative;
 }
 
 .link {
@@ -117,6 +118,36 @@ body {
 
 .languages__link:hover::after {
     width: 100%;
+}
+
+.header__background-image {
+    position: absolute;
+    z-index: -3;
+}
+
+.header__background-image--first {
+    top: 0;
+    left: 30%;
+}
+
+.header__background-image--second {
+    top: 100%;
+    left: 25%;
+}
+
+.header__background-image--third {
+    top: 120%;
+    left: 30%;
+}
+
+.header__background-image--fourth {
+    top: 22%;
+    left: 28%;
+}
+
+.header__background-image--fifth {
+    top: 150%;
+    left: 35%;
 }
 
 /* navigation */
@@ -301,6 +332,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     padding: 6rem 0;
+    position: relative;
 }
 
 .hero__text-wrapper {
@@ -477,6 +509,61 @@ body {
     height: 121px;
 }
 
+.hero__background-image {
+    position: absolute;
+    z-index: -3;
+}
+
+.hero__background-image--first {
+    top: 10%;
+    left: 40%;
+}
+
+.hero__background-image--second {
+    top: 25%;
+    left: 22%;
+    z-index: -1;
+}
+
+.hero__background-image--third {
+    top: 25%;
+    left: 35%;
+    z-index: -3;
+}
+
+.hero__background-image--fourth {
+    top: 38%;
+    left: 62%;
+    z-index: -1;
+}
+
+.hero__background-image--fifth {
+    top: 70%;
+    left: 70%;
+    z-index: 1;
+}
+
+.hero__background-image--sixth {
+    top: 35%;
+    left: 75%;
+    z-index: 1;
+}
+
+.hero__background-image--seventh {
+    top: 75%;
+    left: 35%;
+    z-index: 1;
+}
+
+.hero__background-image--eighth {
+    top: 50%;
+    left: 0;
+}
+
+.hero__background-image--ninth {
+    top: 55%;
+    left: 10%;
+}
 /* about-us */
 .about-us {
     padding: 0;
@@ -1337,6 +1424,11 @@ body {
 
     .scroll {
         display: block;
+    }
+
+    .hero__background-image--second,
+    .hero__background-image--fourth {
+        z-index: 1;
     }
 
     /* about-us */
