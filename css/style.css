@@ -602,6 +602,7 @@ body {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    position: relative;
 }
 
 .about-us__logo-wrapper {
@@ -718,6 +719,30 @@ body {
 
 .member__btn:hover {
     background-color: #333d3c;
+}
+
+.about-us__background-image {
+    position: absolute;
+    z-index: -3;
+}
+
+.about-us__background-image--first {
+    top: 0;
+    left: 30%;
+}
+.about-us__background-image--second {
+    top: 60%;
+    left: 75%;
+}
+
+.about-us__background-image--third {
+    top: 40%;
+    left: 0;
+}
+
+.about-us__background-image--fourth {
+    top: 140%;
+    left: -45%;
 }
 
 /* mission */
@@ -956,10 +981,6 @@ body {
     justify-content: center;
 }
 
-.benefits__item--background {
-    display: none;
-}
-
 .benefits__text-wrapper {
     width: 100%;
     display: -webkit-box;
@@ -1005,6 +1026,12 @@ body {
     font-size: 0.9rem;
     line-height: 20px;
     letter-spacing: 0.07px;
+}
+
+.benefits__photo--security-background,
+.benefits__photo--security-second-background,
+.benefits__item--background  {
+    display: none;
 }
 
 /* portfolio */
@@ -1533,10 +1560,6 @@ body {
         position: relative;
     }
 
-    .benefits__item--background {
-        display: block;
-    }
-
     .benefits__item--column-reverse {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
@@ -1554,12 +1577,14 @@ body {
         position: absolute;
         bottom: -40px;
         left: 0;
+        display: block;
     }
 
     .benefits__photo--comfort-second-background {
         position: absolute;
         top: 40px;
         right: 0;
+        display: block;
     }
 
     .benefits__item--security {
@@ -1574,12 +1599,14 @@ body {
         bottom: -80px;
         left: -100px;
         z-index: -3;
+        display: block;
     }
 
     .benefits__photo--security-second-background {
         position: absolute;
         bottom: -200px;
         right: -50px;
+        display: block;
     }
 
     .benefits__item--appreciation {
@@ -1598,6 +1625,7 @@ body {
         position: absolute;
         top: -200px;
         right: -60px;
+        display: block;
     }
 
     .benefits__item--counting-down {
