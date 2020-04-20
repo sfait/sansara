@@ -134,7 +134,7 @@ body {
 
 .hamburger__inner {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #333d3c;
     position: absolute;
     left: 0;
@@ -146,7 +146,7 @@ body {
 .hamburger__inner::before,
 .hamburger__inner::after {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: #333d3c;
     position: absolute;
     content: "";
@@ -626,6 +626,67 @@ body {
     text-align: center;
 }
 
+.benefits__wrapper {}
+
+.benefits__item {
+    width: 100%;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+    padding: 0.5rem;
+}
+
+.benefits__item--column-reverse {
+    flex-direction: column-reverse;
+}
+
+.benefits__photo-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefits__text-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.benefits__title {
+    color: #333d3c;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.benefits__title::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #333d3c;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+.benefits__paragraph {
+    color: #868782;
+    font-family: "sofia-pro", "Arial", sans-serif;
+    font-size: 0.9rem;
+    line-height: 20px;
+    letter-spacing: 0.07px;
+}
+
 /* portfolio */
 .portfolio__wrapper {
     width: 100%;
@@ -1003,6 +1064,33 @@ body {
 
     .sup-number--for-title {
         top: 30%;
+    }
+
+    .benefits__item {
+        width: 75%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .benefits__item--column-reverse {
+        flex-direction: row;
+    }
+
+    .benefits__photo-wrapper {
+        width: 50%;
+    }
+
+    .benefits__text-wrapper {
+        width: 50%;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        margin: 0 2rem;
+    }
+
+    .benefits__title::after {
+        width: 46px;
     }
 
     /* portfolio-offer-wrapper */
