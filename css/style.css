@@ -952,19 +952,25 @@ body {
 }
 
 .section__btn {
-    background-color: #bab8ac;
-    color: #ffffff;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 2.4px;
     padding: 0.2rem 0.8rem;
-    -webkit-transition: background 0.6s, color 0.3s, border 0.6s;
-    -o-transition: background 0.6s, color 0.3s, border 0.6s;
-    transition: background 0.6s, color 0.3s, border 0.6s;
+    -webkit-transition: all ease-out 0.6s;
+    -o-transition: all ease-out 0.6s;
+    transition: all ease-out 0.6s;
 }
 
-.section__btn:hover {
-    background-color: #cbf2f0;
+.section__btn--portfolio {
+    background-color: #bab8ac;
+    color: #ffffff;
+    -webkit-box-shadow: inset 0 0 0 0 #cbf2f0;
+    box-shadow: inset 0 0 0 0 #cbf2f0;
+}
+
+.slide__left-diagonal:hover {
+    -webkit-box-shadow: inset 400px 50px 0 0 #cbf2f0;
+    box-shadow: inset 400px 50px 0 0 #cbf2f0;
     color: #333d3c;
 }
 
@@ -1006,14 +1012,37 @@ body {
     border: 2px solid #cbf2f0;
     background-color: #cbf2f0;
     color: #333d3c;
+    -webkit-box-shadow: inset 0 0 0 0 #bab8ac;
+    box-shadow: inset 0 0 0 0 #bab8ac;
 }
 
-.section__btn--offer:hover {
-    border-color: #bab8ac;
+.slide__right-diagonal:hover {
+    -webkit-box-shadow: inset -400px -50px 0 0 #bab8ac;
+    box-shadow: inset -400px -50px 0 0 #bab8ac;
+    color: #fff;
+    border: 2px solid #bab8ac;
+}
+
+/*
+.section__btn {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    padding: 0.2rem 0.8rem;
+    transition: ease-out 0.6s;
+}
+
+.section__btn--portfolio {
     background-color: #bab8ac;
     color: #ffffff;
+    box-shadow: inset 0 0 0 0 #cbf2f0;
 }
 
+.slide__left-diagonal:hover {
+    box-shadow: inset 400px 50px 0 0 #cbf2f0;
+    color: #333d3c;
+}
+ */
 /* contact */
 .contact__wrapper {
     display: -webkit-box;
@@ -1101,8 +1130,7 @@ body {
 }
 
 .form__btn:hover {
-    background-color: #cbf2f0;
-    color: #333d3c;
+    background-color: #333d3c;
 }
 
 .address__wrapper {
@@ -1575,12 +1603,12 @@ fonts:
 font-family: "sofia-pro", sans-serif;
 font-family: "ff-good-headline-web-pro-ext", sans-serif;
 
-do HTML na parallax <!-- <div id="parallax"></div> -->
-#parallax {
+do HTML na parallax <!-- <div class="parallax"></div> -->
+.parallax {
     position: relative;
-    width: 1000px;
-    height: 636px;
-    background-image: url("../img/box.png");
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bulb.png");
     background-repeat: no-repeat;
     background-position: center;
     background-position: 50% 50%;

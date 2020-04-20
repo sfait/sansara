@@ -49,7 +49,7 @@ function changeSlide() {
 }
 
 function useParallax() {
-    const elem = document.querySelector("#parallax");
+    const elem = document.querySelector(".parallax");
 
     function parallax(e) {
         const width = window.innerWidth / 2;
