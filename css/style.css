@@ -434,6 +434,7 @@ body {
 }
 
 .about-us__paragraph {
+    width: 100%;
     color: #868782;
     font-size: 0.9rem;
     line-height: 20px;
@@ -442,7 +443,12 @@ body {
     margin-bottom: 2rem;
 }
 
+.about-us__team {
+    width: 100%;
+}
+
 .about-us__member {
+    width: 100%;
     max-width: 650px;
     font-weight: bold;
     text-transform: uppercase;
@@ -627,6 +633,7 @@ body {
 }
 
 .benefits__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -684,6 +691,7 @@ body {
 }
 
 .benefits__paragraph {
+    width: 100%;
     color: #868782;
     font-family: "sofia-pro", "Arial", sans-serif;
     font-size: 0.9rem;
