@@ -31,21 +31,40 @@ function showHamburgerMenu() {
 }
 
 function changeSlide() {
-    const sliderParagraphs = document.querySelectorAll(".slider__paragraph");
-    const sliderButtonsHeader = document.querySelectorAll(".slider__btn-header");
-    const sliderButton = document.querySelector(".slider__btn");
+    // wersja robocza, do poprawy
+    const paragraphMission = document.querySelector(".slider__paragraph--mission");
+    const paragraphVision = document.querySelector(".slider__paragraph--vision");
+    const btnMission = document.querySelector(".slider__btn-header--mission");
+    const btnVision = document.querySelector(".slider__btn-header--vision");
+    const sliderBtn = document.querySelector(".slider__btn");
 
-    for (let i = 0; i < sliderButtonsHeader.length; i++) {
-        sliderButtonsHeader[i].addEventListener("click", function() {
-            this.classList.add("slider__btn-header--active");
-        })
-    }
+    btnMission.addEventListener("click", function() {
+        this.classList.add("slider__btn-header--active");
+        paragraphMission.classList.add("slider__paragraph--active");
+        btnVision.classList.remove("slider__btn-header--active");
+        paragraphVision.classList.remove("slider__paragraph--active");
+    })
 
-    // sliderButton.addEventListener("click", function() {
-    //     console.log("hello")
-    // })
+    btnVision.addEventListener("click", function() {
+        this.classList.add("slider__btn-header--active");
+        paragraphVision.classList.add("slider__paragraph--active");
+        btnMission.classList.remove("slider__btn-header--active");
+        paragraphMission.classList.remove("slider__paragraph--active");
+    })
 
-
+    sliderBtn.addEventListener("click", function() {
+        if (paragraphMission.classList.contains("slider__paragraph--active")) {
+            btnVision.classList.add("slider__btn-header--active");
+            paragraphVision.classList.add("slider__paragraph--active");
+            btnMission.classList.remove("slider__btn-header--active");
+            paragraphMission.classList.remove("slider__paragraph--active");
+        } else {
+            btnMission.classList.add("slider__btn-header--active");
+            paragraphMission.classList.add("slider__paragraph--active");
+            btnVision.classList.remove("slider__btn-header--active");
+            paragraphVision.classList.remove("slider__paragraph--active");
+        }
+    })
 }
 
 function useParallax() {
@@ -68,7 +87,7 @@ function useParallax() {
 const init = function() {
     changeTitle();
     showHamburgerMenu();
-    // changeSlide();
+    changeSlide();
     // useParallax();
 };
 
