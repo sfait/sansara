@@ -1088,11 +1088,50 @@ body {
     left: 65%;
 }
 
-.why-us__background-image--ninth {}
+.why-us__background-image--ninth {
+    top: 30%;
+    left: 10%;
+}
 
-.why-us__background-image--tenth {}
+.why-us__background-image--tenth {
+    top: 23%;
+    left: 35%;
+}
 
-.why-us__background-image--eleventh {}
+.why-us__background-image--eleventh {
+    top: 42%;
+    left: 32%;
+}
+
+.why-us__background-image--twelfth {
+    top: 44%;
+    right: 20%;
+}
+
+.why-us__background-image--thirteenth {
+    top: 50%;
+    right: 22%;
+}
+
+.why-us__background-image--fourteenth {
+    top: 72%;
+    right: 15%;
+}
+
+.why-us__background-image--fifteenth {
+    top: 84%;
+    right: 20%;
+}
+
+.why-us__background-image--sixteenth {
+    top: 85%;
+    right: 15%;
+}
+
+.why-us__background-image--seventeenth {
+    bottom: -7%;
+    left: 18%;
+}
 
 /* portfolio */
 .portfolio__wrapper {
@@ -1743,7 +1782,7 @@ body {
     .portfolio-offer-wrapper {
         width: 100%;
         height: 600px;
-        margin-bottom: 4rem;
+        margin: 15rem 0 5rem;
         position: relative;
     }
 
