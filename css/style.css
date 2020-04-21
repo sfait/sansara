@@ -13,11 +13,10 @@ html, body {
 }
 
 html {
-    background: #caf2f1 url("../img/background-gradient.png") repeat right top;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background: rgb(202, 242, 241);
+    background: -webkit-gradient(linear, left top, right top, color-stop(24%, rgba(202, 242, 241, 1)), color-stop(66%, rgba(243, 221, 195, 1)));
+    background: -o-linear-gradient(left, rgba(202, 242, 241, 1) 24%, rgba(243, 221, 195, 1) 66%);
+    background: linear-gradient(90deg, rgba(202, 242, 241, 1) 24%, rgba(243, 221, 195, 1) 66%);
 }
 
 body {
@@ -564,6 +563,7 @@ body {
     top: 55%;
     left: 10%;
 }
+
 /* about-us */
 .about-us {
     padding: 0;
@@ -695,7 +695,17 @@ body {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    border-bottom: 1px solid #333d3c;
+    position: relative;
+}
+
+.member__underline::after {
+    content: "";
+    width: 90%;
+    height: 1px;
+    background-color: #333d3c;
+    position: absolute;
+    left: 5%;
+    bottom: 7px;
 }
 
 .member__name {
@@ -730,6 +740,7 @@ body {
     top: 0;
     left: 30%;
 }
+
 .about-us__background-image--second {
     top: 60%;
     left: 75%;
@@ -883,6 +894,10 @@ body {
 }
 
 /* why-us */
+.why-us {
+    position: relative;
+}
+
 .why-us__header-wrapper {
     padding: 2rem 0 5rem;
     text-align: center;
@@ -1030,9 +1045,42 @@ body {
 
 .benefits__photo--security-background,
 .benefits__photo--security-second-background,
-.benefits__item--background  {
+.benefits__item--background {
     display: none;
 }
+
+.why-us__background-image {
+    position: absolute;
+    z-index: -3;
+}
+
+.why-us__background-image--first {
+    top: 0;
+    right: 0;
+}
+
+.why-us__background-image--second {
+    top: 0;
+    left: 0;
+}
+
+.why-us__background-image--third {}
+
+.why-us__background-image--fourth {}
+
+.why-us__background-image--fifth {}
+
+.why-us__background-image--sixth {}
+
+.why-us__background-image--seventh {}
+
+.why-us__background-image--eighth {}
+
+.why-us__background-image--ninth {}
+
+.why-us__background-image--tenth {}
+
+.why-us__background-image--eleventh {}
 
 /* portfolio */
 .portfolio__wrapper {
@@ -1295,6 +1343,7 @@ body {
 
 /* footer */
 .footer {
+    width: 100%;
     padding: 3rem 0;
     background-color: #fff;
     display: -webkit-box;
@@ -1311,6 +1360,8 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     margin-top: 5rem;
+    position: absolute;
+    bottom 0;
 }
 
 .footer__first-logo {
@@ -1657,8 +1708,8 @@ body {
 
     .benefits__photo--success {
         position: absolute;
-        left: 30px;
-        bottom: -120px;
+        left: 20px;
+        bottom: -190px;
     }
 
     .benefits__photo-wrapper {
@@ -1825,7 +1876,6 @@ notebook
 fonts:
 font-family: "sofia-pro", sans-serif;
 font-family: "ff-good-headline-web-pro-ext", sans-serif;
-
 do HTML na parallax <!-- <div class="parallax"></div> -->
 .parallax {
     position: relative;
