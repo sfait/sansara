@@ -45,6 +45,7 @@ body {
 
 /* header */
 .header {
+    width: 100%;
     padding: 1rem 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -60,6 +61,12 @@ body {
     -ms-flex-pack: justify;
     justify-content: space-between;
     position: relative;
+}
+
+.header__logo,
+.header__social-icons,
+.header__languages {
+    width: auto;
 }
 
 .link {
