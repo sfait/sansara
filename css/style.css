@@ -17,9 +17,6 @@ html {
     background: -o-linear-gradient(left, rgba(202, 242, 241, 1) 24%, rgba(243, 221, 195, 1) 66%);
     background: -webkit-gradient(linear, left top, right top, color-stop(24%, rgba(202, 242, 241, 1)), color-stop(66%, rgba(243, 221, 195, 1)));
     background: linear-gradient(90deg, rgba(202, 242, 241, 1) 24%, rgba(243, 221, 195, 1) 66%);
-}
-
-body {
     overflow-x: hidden;
 }
 
