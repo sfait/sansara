@@ -1155,6 +1155,26 @@ body {
     display: none;
 }
 
+.portfolio__background-image {
+    position: absolute;
+    z-index: -3;
+}
+
+.portfolio__background-image--first {
+    top: 80%;
+    right: 2%;
+}
+
+.portfolio__background-image--second {
+    top: 20%;
+    right: 10%;
+}
+
+.portfolio__background-image--third {
+    top: 35%;
+    left: 3%;
+}
+
 /* offer */
 .offer__wrapper {
     width: 100%;
@@ -1772,14 +1792,9 @@ body {
     }
 
     .contact::after {
-        content: "";
         width: 90%;
         height: 70%;
-        background: url("../img/box2.png") no-repeat top/cover;
-        position: absolute;
-        bottom: -150px;
-        right: 0;
-        z-index: -3;
+        right: -5%;
     }
 
     .contact__wrapper {
