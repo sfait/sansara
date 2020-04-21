@@ -104,30 +104,12 @@ function showAnimations() {
     });
 };
 
-function useParallax() {
-    const elem = document.querySelector(".parallax");
-
-    function parallax(e) {
-        const width = window.innerWidth / 2;
-        const height = window.innerHeight / 2;
-        const mouseX = e.clientX;
-        const mouseY = e.clientY;
-        const depth1 = "".concat(50 - (mouseX - width) * 0.01, "% ").concat(50 - (mouseY - height) * 0.01, "%");
-        const depth2 = "".concat(50 - (mouseX - width) * 0.02, "% ").concat(50 - (mouseY - height) * 0.02, "%");
-        const x = "".concat(depth2, ", ").concat(depth1);
-        elem.style.backgroundPosition = x;
-    }
-
-    document.addEventListener("mousemove", parallax);
-}
-
 const init = function() {
     changeTitle();
     showHamburgerMenu();
     changeSlide();
     useScrollReveal();
     // showAnimations();
-    // useParallax();
 };
 
 document.addEventListener("DOMContentLoaded", init);
