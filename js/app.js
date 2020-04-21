@@ -67,6 +67,43 @@ function changeSlide() {
     })
 }
 
+function useScrollReveal() {
+    const slideLeft = {
+        distance: "150%",
+        origin: "left",
+        delay: "250",
+        opacity: null
+    };
+
+    const slideRight = {
+        distance: "150%",
+        origin: "right",
+        delay: "250",
+        opacity: null
+    }
+
+    ScrollReveal().reveal(".animation-show", { delay: 500 });
+    ScrollReveal().reveal(".animation-show--fast", { delay: 300 });
+    ScrollReveal().reveal(".animation-show--slow", { delay: 700 });
+    ScrollReveal().reveal(".animation-slide-left", slideLeft);
+    ScrollReveal().reveal(".animation-slide-right", slideRight);
+}
+
+
+function showAnimations() {
+    const mobile = window.matchMedia("screen and (min-width: 900px)");
+
+    if (mobile.matches) {
+        useScrollReveal();
+    }
+
+    mobile.addListener( function(mobile) {
+        if (mobile.matches) {
+            useScrollReveal();
+        }
+    });
+};
+
 function useParallax() {
     const elem = document.querySelector(".parallax");
 
@@ -88,6 +125,8 @@ const init = function() {
     changeTitle();
     showHamburgerMenu();
     changeSlide();
+    useScrollReveal();
+    // showAnimations();
     // useParallax();
 };
 
