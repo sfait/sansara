@@ -47,6 +47,7 @@ body {
 .header {
     position: relative;
 }
+
 .header__wrapper {
     padding: 1rem 3rem;
     display: -webkit-box;

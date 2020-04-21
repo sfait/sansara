@@ -30,8 +30,14 @@ function showHamburgerMenu() {
     hamburger.addEventListener("click", handleClick);
 }
 
+function changeSlideItem(firstHeader, firstParagraph, secondHeader, secondParagraph) {
+    firstHeader.classList.add("slider__btn-header--active");
+    firstParagraph.classList.add("slider__paragraph--active");
+    secondHeader.classList.remove("slider__btn-header--active");
+    secondParagraph.classList.remove("slider__paragraph--active");
+}
+
 function changeSlide() {
-    // wersja robocza, do poprawy
     const paragraphMission = document.querySelector(".slider__paragraph--mission");
     const paragraphVision = document.querySelector(".slider__paragraph--vision");
     const btnMission = document.querySelector(".slider__btn-header--mission");
@@ -39,30 +45,18 @@ function changeSlide() {
     const sliderBtn = document.querySelector(".slider__btn");
 
     btnMission.addEventListener("click", function() {
-        this.classList.add("slider__btn-header--active");
-        paragraphMission.classList.add("slider__paragraph--active");
-        btnVision.classList.remove("slider__btn-header--active");
-        paragraphVision.classList.remove("slider__paragraph--active");
+        changeSlideItem(btnMission, paragraphMission, btnVision, paragraphVision);
     })
 
     btnVision.addEventListener("click", function() {
-        this.classList.add("slider__btn-header--active");
-        paragraphVision.classList.add("slider__paragraph--active");
-        btnMission.classList.remove("slider__btn-header--active");
-        paragraphMission.classList.remove("slider__paragraph--active");
+        changeSlideItem(btnVision, paragraphVision, btnMission, paragraphMission);
     })
 
     sliderBtn.addEventListener("click", function() {
         if (paragraphMission.classList.contains("slider__paragraph--active")) {
-            btnVision.classList.add("slider__btn-header--active");
-            paragraphVision.classList.add("slider__paragraph--active");
-            btnMission.classList.remove("slider__btn-header--active");
-            paragraphMission.classList.remove("slider__paragraph--active");
+            changeSlideItem(btnVision, paragraphVision, btnMission, paragraphMission);
         } else {
-            btnMission.classList.add("slider__btn-header--active");
-            paragraphMission.classList.add("slider__paragraph--active");
-            btnVision.classList.remove("slider__btn-header--active");
-            paragraphVision.classList.remove("slider__paragraph--active");
+            changeSlideItem(btnMission, paragraphMission, btnVision, paragraphVision);
         }
     })
 }
