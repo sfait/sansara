@@ -1043,38 +1043,50 @@ body {
     letter-spacing: 0.07px;
 }
 
-.benefits__photo--security-background,
-.benefits__photo--security-second-background,
-.benefits__item--background {
-    display: none;
-}
-
 .why-us__background-image {
     position: absolute;
     z-index: -3;
 }
 
 .why-us__background-image--first {
-    top: 0;
-    right: 0;
+    top: 20%;
+    right: 10%;
 }
 
 .why-us__background-image--second {
-    top: 0;
-    left: 0;
+    top: 25%;
+    right: 13%;
 }
 
-.why-us__background-image--third {}
+.why-us__background-image--third {
+    top: 60%;
+    right: 0;
+}
 
-.why-us__background-image--fourth {}
+.why-us__background-image--fourth {
+    top: 42%;
+    right: 5%;
+}
 
-.why-us__background-image--fifth {}
+.why-us__background-image--fifth {
+    top: 60%;
+    left: -5%;
+}
 
-.why-us__background-image--sixth {}
+.why-us__background-image--sixth {
+    top: 68%;
+    left: 20%;
+}
 
-.why-us__background-image--seventh {}
+.why-us__background-image--seventh {
+    top: 70%;
+    left: 24%;
+}
 
-.why-us__background-image--eighth {}
+.why-us__background-image--eighth {
+    top: 68%;
+    left: 65%;
+}
 
 .why-us__background-image--ninth {}
 
@@ -1665,21 +1677,6 @@ body {
         position: relative;
     }
 
-    .benefits__photo--security-background {
-        position: absolute;
-        bottom: -80px;
-        left: -100px;
-        z-index: -3;
-        display: block;
-    }
-
-    .benefits__photo--security-second-background {
-        position: absolute;
-        bottom: -200px;
-        right: -50px;
-        display: block;
-    }
-
     .benefits__item--appreciation {
         max-width: 55%;
         -ms-flex-item-align: start;
@@ -1690,13 +1687,6 @@ body {
     .benefits__photo--appreciation {
         position: absolute;
         right: -20px;
-    }
-
-    .benefits__photo--appreciation-background {
-        position: absolute;
-        top: -200px;
-        right: -60px;
-        display: block;
     }
 
     .benefits__item--counting-down {
@@ -1710,13 +1700,6 @@ body {
         max-width: 90%;
         -ms-flex-item-align: start;
         align-self: flex-start;
-    }
-
-    .benefits__photo--enthusiasm-background {
-        position: absolute;
-        right: -30px;
-        bottom: -30px;
-        z-index: -3;
     }
 
     .benefits__item--success {
