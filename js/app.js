@@ -77,7 +77,7 @@ const init = function() {
     changeTitle();
     showHamburgerMenu();
     changeSlide();
-    showAnimation();
+    // showAnimation();
 };
 
 document.addEventListener("DOMContentLoaded", init);
