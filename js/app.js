@@ -62,16 +62,22 @@ function changeSlide() {
 }
 
 function useScrollReveal() {
-    ScrollReveal().reveal(".animation-show", { delay: 500 });
-    ScrollReveal().reveal(".animation-show--fast", { delay: 300 });
-    ScrollReveal().reveal(".animation-show--slow", { delay: 700 });
+    ScrollReveal().reveal(".animation-show", { delay: 400 });
+    ScrollReveal().reveal(".animation-show--fast", { delay: 200 });
+    ScrollReveal().reveal(".animation-show--slow", { delay: 600 });
+}
+
+function showAnimation() {
+    window.addEventListener("load", function() {
+        useScrollReveal();
+    })
 }
 
 const init = function() {
     changeTitle();
     showHamburgerMenu();
     changeSlide();
-    useScrollReveal();
+    showAnimation();
 };
 
 document.addEventListener("DOMContentLoaded", init);
