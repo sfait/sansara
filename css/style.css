@@ -10,7 +10,6 @@ html, body {
     position: relative;
     scroll-behavior: smooth;
     font-family: "ff-good-headline-web-pro-ext", "Arial", sans-serif;
-    overflow-x: hidden;
 }
 
 html {
@@ -18,6 +17,11 @@ html {
     background: -o-linear-gradient(left, rgba(202, 242, 241, 1) 24%, rgba(243, 221, 195, 1) 66%);
     background: -webkit-gradient(linear, left top, right top, color-stop(24%, rgba(202, 242, 241, 1)), color-stop(66%, rgba(243, 221, 195, 1)));
     background: linear-gradient(90deg, rgba(202, 242, 241, 1) 24%, rgba(243, 221, 195, 1) 66%);
+}
+
+body {
+    overflow-x: hidden;
+    z-index: 0;
 }
 
 .wrapper {
@@ -105,6 +109,7 @@ html {
 .languages__link::after {
     content: "";
     width: 0;
+    max-width: 25px;
     height: 2px;
     background-color: #333d3c;
     position: absolute;
@@ -160,8 +165,8 @@ html {
     background-color: transparent;
     z-index: 3;
     position: fixed;
-    top: 2.8rem;
-    right: 2.5rem;
+    top: 2.5rem;
+    right: 1.5rem;
 }
 
 .hamburger, .navigation {
@@ -332,6 +337,7 @@ html {
     justify-content: center;
     padding: 6rem 0;
     position: relative;
+    margin-bottom: 4rem;
 }
 
 .hero__text-wrapper {
@@ -519,8 +525,8 @@ html {
 }
 
 .hero__background-image--second {
-    top: 25%;
-    left: 22%;
+    top: 27%;
+    left: 20%;
     z-index: -1;
 }
 
@@ -567,6 +573,7 @@ html {
 /* about-us */
 .about-us {
     padding: 0;
+    position: relative;
 }
 
 .about-us__wrapper {
@@ -587,7 +594,7 @@ html {
     margin-bottom: 3rem;
 }
 
-.about-us__logos-wrapper {
+.about-us__item {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -602,65 +609,71 @@ html {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 0;
 }
 
 .about-us__logo-wrapper {
-    margin: 2.5rem 0;
+    width: auto;
     position: relative;
+    margin-left: 0;
+    margin-bottom: 2rem;
+}
+
+.about-us__first-logo-background--first {
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
+
+.about-us__first-logo-background--second {
+    position: absolute;
+    top: 100px;
+    left: -100px;
 }
 
 .sup-number-wrapper {
-    height: 100%;
     position: relative;
     display: inline-block;
 }
 
 .sup-number {
-    height: 100%;
     color: #868782;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.8px;
     position: absolute;
-    top: 15px;
-    right: -20px;
+    top: 20px;
+    right: -25px;
 }
 
-.about-us__second-logo-background {
+.about-us__second-logo-background--first {
     position: absolute;
     bottom: -100%;
-    left: -10%;
+    left: -15%;
     z-index: -1;
+}
+
+.about-us__second-logo-background--second {
+    position: absolute;
+    top: -50px;
+    right: -30px;
 }
 
 .about-us__text-wrapper {
     width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 2rem;
 }
 
 .about-us__paragraph {
-    width: 100%;
     color: #868782;
     font-size: 0.9rem;
     line-height: 20px;
     letter-spacing: 0.07px;
     font-family: "sofia-pro", "Arial", sans-serif;
     margin-bottom: 2rem;
+    padding-right: 0;
+    padding-top: 1rem;
 }
 
 .about-us__team {
@@ -741,23 +754,8 @@ html {
 }
 
 .about-us__background-image--first {
-    top: 0;
-    left: 30%;
-}
-
-.about-us__background-image--second {
-    top: 60%;
-    left: 75%;
-}
-
-.about-us__background-image--third {
-    top: 40%;
-    left: 0;
-}
-
-.about-us__background-image--fourth {
-    top: 140%;
-    left: -45%;
+    top: 125%;
+    left: -10%;
 }
 
 /* mission */
@@ -924,7 +922,7 @@ html {
     text-transform: uppercase;
     color: #333d3c;
     font-size: 3rem;
-    letter-spacing: 12px;
+    letter-spacing: 5px;
     margin: 0 0 1rem;
     position: relative;
 }
@@ -1083,7 +1081,7 @@ html {
 
 .why-us__background-image--eighth {
     top: 68%;
-    left: 65%;
+    left: 60%;
 }
 
 .why-us__background-image--ninth {
@@ -1104,6 +1102,7 @@ html {
 .why-us__background-image--twelfth {
     top: 44%;
     right: 20%;
+    display: none;
 }
 
 .why-us__background-image--thirteenth {
@@ -1129,6 +1128,11 @@ html {
 .why-us__background-image--seventeenth {
     bottom: -7%;
     left: 18%;
+}
+
+.why-us__background-image--eighteenth {
+    top: 87%;
+    left: 25%;
 }
 
 /* portfolio */
@@ -1270,6 +1274,7 @@ html {
 .contact {
     padding: 0;
     position: relative;
+    overflow: hidden;
 }
 
 .contact::after {
@@ -1278,9 +1283,10 @@ html {
     height: 70%;
     background: url("../img/box2.png") no-repeat top/cover;
     position: absolute;
-    bottom: -170px;
+    bottom: -90px;
     right: 0;
     z-index: -3;
+    overflow: hidden;
 }
 
 .contact__wrapper {
@@ -1291,6 +1297,12 @@ html {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     padding: 2rem 0;
 }
 
@@ -1385,6 +1397,10 @@ html {
     font-style: normal;
 }
 
+.sup-number--contact {
+    color: #333d3c;
+}
+
 .address__span {
     color: #333d3c;
     font-size: 1.8rem;
@@ -1411,6 +1427,7 @@ html {
 .contact__background-image--first {
     top: 10%;
     right: -5%;
+    overflow: hidden;
 }
 
 .contact__background-image--second {
@@ -1421,12 +1438,6 @@ html {
 .contact__background-image--third {
     bottom: 10%;
     left: 5%;
-}
-
-.contact__background-image--fourth {
-    bottom: -15%;
-    right: 24%;
-    z-index: 1;
 }
 
 /* footer */
@@ -1447,7 +1458,7 @@ html {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 5rem;
+    position: relative;
 }
 
 .footer__first-logo {
@@ -1533,6 +1544,17 @@ html {
     text-align: center;
 }
 
+.footer__background-image {
+    position: absolute;
+    z-index: 0;
+}
+
+.footer__background-image--first {
+    top: -45%;
+    right: 25%;
+    display: none;
+}
+
 /* media queries*/
 @media only screen and (min-width: 900px) {
 
@@ -1554,7 +1576,7 @@ html {
     .hamburger {
         background-color: #333d3c;
         top: 50%;
-        right: 20px;
+        right: 0;
     }
 
     .hamburger__inner {
@@ -1573,6 +1595,11 @@ html {
     }
 
     /* hero */
+    .hero {
+        padding: 8rem 0;
+        margin-bottom: 6rem;
+    }
+
     .hero__text-wrapper {
         height: 700px;
     }
@@ -1596,11 +1623,7 @@ html {
     }
 
     /* about-us */
-    .about-us {
-        padding: 5rem 0;
-    }
-
-    .about-us__wrapper {
+    .about-us__item {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -1608,24 +1631,26 @@ html {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
         justify-content: space-between;
+        margin-bottom: 2rem;
+        padding-left: 2rem;
+        text-align: left;
     }
 
-    .about-us__logos-wrapper {
-        width: 50%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
+    .about-us__logo-wrapper {
+        margin-left: 2.5rem;
     }
 
     .about-us__text-wrapper {
         width: 50%;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        margin-top: 0;
+    }
+
+    .about-us__paragraph {
+        padding-right: 2rem;
+        padding-top: 0;
+    }
+
+    .about-us__team {
+        width: 50%;
     }
 
     /* mission */
@@ -1664,7 +1689,7 @@ html {
     /* why-us */
     .why-us {
         padding: 3rem 0;
-        margin-bottom: 8rem;
+        margin-bottom: 10rem;
     }
 
     .section__title {
@@ -1686,6 +1711,7 @@ html {
     }
 
     .benefits__photo-wrapper {
+        width: 50%;
         position: relative;
     }
 
@@ -1702,22 +1728,8 @@ html {
         position: relative;
     }
 
-    .benefits__photo--comfort-background {
-        position: absolute;
-        bottom: -40px;
-        left: 0;
-        display: block;
-    }
-
-    .benefits__photo--comfort-second-background {
-        position: absolute;
-        top: 40px;
-        right: 0;
-        display: block;
-    }
-
     .benefits__item--security {
-        max-width: 60%;
+        max-width: 55%;
         -ms-flex-item-align: end;
         align-self: flex-end;
         position: relative;
@@ -1727,11 +1739,11 @@ html {
         max-width: 55%;
         -ms-flex-item-align: start;
         align-self: flex-start;
-        position: relative;
     }
 
     .benefits__photo--appreciation {
         position: absolute;
+        bottom: -50px;
         right: -20px;
     }
 
@@ -1739,13 +1751,26 @@ html {
         max-width: 55%;
         -ms-flex-item-align: end;
         align-self: flex-end;
-        margin: 1rem 0 2rem;
+        margin: 3.5rem 0 2rem;
+    }
+
+    .benefits__photo--counting-down {
+        position: absolute;
+        bottom: -120px;
+        left: -50px;
     }
 
     .benefits__item--enthusiasm {
-        max-width: 90%;
+        width: 65%;
         -ms-flex-item-align: start;
         align-self: flex-start;
+        margin: 3rem 0;
+    }
+
+    .benefits__photo--enthusiasm {
+        position: absolute;
+        top: -120px;
+        left: -150px;
     }
 
     .benefits__item--success {
@@ -1761,10 +1786,6 @@ html {
         bottom: -190px;
     }
 
-    .benefits__photo-wrapper {
-        width: 50%;
-    }
-
     .benefits__text-wrapper {
         width: 50%;
         -webkit-box-orient: vertical;
@@ -1778,11 +1799,15 @@ html {
         -ms-flex-pack: start;
         justify-content: flex-start;
         text-align: left;
-        margin: 0 3rem;
+        margin: 0 2.5rem;
     }
 
     .benefits__title::after {
         width: 46px;
+    }
+
+    .why-us__background-image--twelfth {
+        display: block;
     }
 
     /* portfolio-offer-wrapper */
@@ -1892,6 +1917,10 @@ html {
         width: 15%;
         text-align: right;
     }
+
+    .footer__background-image--first {
+        display: block;
+    }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -1912,5 +1941,16 @@ html {
 
     .member__btn {
         margin-left: 0.5rem;
+    }
+
+    /* why-us */
+    .benefits__photo--counting-down {
+        bottom: -120px;
+        left: 0;
+    }
+
+    .benefits__photo--enthusiasm {
+        top: -120px;
+        left: -70px;
     }
 }

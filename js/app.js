@@ -62,9 +62,9 @@ function changeSlide() {
 }
 
 function useScrollReveal() {
-    ScrollReveal().reveal(".animation-show", { delay: 400 });
-    ScrollReveal().reveal(".animation-show--fast", { delay: 200 });
-    ScrollReveal().reveal(".animation-show--slow", { delay: 600 });
+    ScrollReveal().reveal(".animation-show", { delay: 500 });
+    ScrollReveal().reveal(".animation-show--fast", { delay: 250 });
+    ScrollReveal().reveal(".animation-show--slow", { delay: 700 });
 }
 
 function showAnimation() {
@@ -77,7 +77,7 @@ const init = function() {
     changeTitle();
     showHamburgerMenu();
     changeSlide();
-    // showAnimation();
+    showAnimation();
 };
 
 document.addEventListener("DOMContentLoaded", init);
