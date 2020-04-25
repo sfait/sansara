@@ -63,7 +63,7 @@ function changeSlide() {
 
 function useScrollReveal() {
     const slideUp = {
-        duration: 1900,
+        duration: 1700,
         delay: 200,
         easing: "ease-out",
         scale: 1,
@@ -71,7 +71,7 @@ function useScrollReveal() {
     };
 
     const slideUpSlow = {
-        duration: 2500,
+        duration: 2300,
         delay: 75,
         easing: "ease-out",
         scale: 1,
@@ -79,7 +79,7 @@ function useScrollReveal() {
     };
 
     const slideUpFast = {
-        duration: 1550,
+        duration: 1250,
         delay: 75,
         easing: "ease-out",
         scale: 1,
@@ -87,31 +87,32 @@ function useScrollReveal() {
     };
 
     const slideUpLittleDistance = {
-        duration: 1100,
+        duration: 900,
         delay: 75,
         easing: "ease-out",
         scale: 1,
         distance: "1.5rem"
     };
 
-    ScrollReveal().reveal(".animation", {delay: 50});
+    ScrollReveal().reveal(".animation", {delay: 100});
     ScrollReveal().reveal(".animation-show", slideUp);
     ScrollReveal().reveal(".animation-show--slow", slideUpSlow);
     ScrollReveal().reveal(".animation-show--fast", slideUpFast);
     ScrollReveal().reveal(".animation-show--little-distance", slideUpLittleDistance);
 }
 
-function showAnimation() {
-    window.addEventListener("load", function() {
-        useScrollReveal();
-    })
-}
+// function showAnimation() {
+//     window.addEventListener("load", function() {
+//         useScrollReveal();
+//     })
+// }
 
 const init = function() {
     changeTitle();
     showHamburgerMenu();
     changeSlide();
-    showAnimation();
+    useScrollReveal();
+    // showAnimation();
 };
 
 document.addEventListener("DOMContentLoaded", init);
