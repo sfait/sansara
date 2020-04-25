@@ -62,9 +62,43 @@ function changeSlide() {
 }
 
 function useScrollReveal() {
-    ScrollReveal().reveal(".animation-show", { delay: 500 });
-    ScrollReveal().reveal(".animation-show--fast", { delay: 250 });
-    ScrollReveal().reveal(".animation-show--slow", { delay: 700 });
+    const slideUp = {
+        duration: 1900,
+        delay: 200,
+        easing: "ease-out",
+        scale: 1,
+        distance: "8rem"
+    };
+
+    const slideUpSlow = {
+        duration: 2500,
+        delay: 75,
+        easing: "ease-out",
+        scale: 1,
+        distance: "8rem"
+    };
+
+    const slideUpFast = {
+        duration: 1550,
+        delay: 75,
+        easing: "ease-out",
+        scale: 1,
+        distance: "8rem"
+    };
+
+    const slideUpLittleDistance = {
+        duration: 1100,
+        delay: 75,
+        easing: "ease-out",
+        scale: 1,
+        distance: "1.5rem"
+    };
+
+    ScrollReveal().reveal(".animation", {delay: 50});
+    ScrollReveal().reveal(".animation-show", slideUp);
+    ScrollReveal().reveal(".animation-show--slow", slideUpSlow);
+    ScrollReveal().reveal(".animation-show--fast", slideUpFast);
+    ScrollReveal().reveal(".animation-show--little-distance", slideUpLittleDistance);
 }
 
 function showAnimation() {
