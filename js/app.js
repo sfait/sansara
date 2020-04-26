@@ -63,7 +63,7 @@ function changeSlide() {
 
 function useScrollReveal() {
     const slideUp = {
-        duration: 2200,
+        duration: 2500,
         delay: 200,
         easing: "ease-out",
         scale: 1,
@@ -71,7 +71,7 @@ function useScrollReveal() {
     };
 
     const slideUpSlow = {
-        duration: 2700,
+        duration: 3000,
         delay: 75,
         easing: "ease-out",
         scale: 1,
@@ -79,7 +79,7 @@ function useScrollReveal() {
     };
 
     const slideUpFast = {
-        duration: 2050,
+        duration: 2350,
         delay: 75,
         easing: "ease-out",
         scale: 1,
