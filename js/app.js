@@ -63,15 +63,15 @@ function changeSlide() {
 
 function useScrollReveal() {
     const slideUp = {
-        duration: 2000,
+        duration: 2200,
         delay: 200,
         easing: "ease-out",
         scale: 1,
-        distance: "8rem"
+        distance: "12rem"
     };
 
     const slideUpSlow = {
-        duration: 2500,
+        duration: 2700,
         delay: 75,
         easing: "ease-out",
         scale: 1,
@@ -79,15 +79,15 @@ function useScrollReveal() {
     };
 
     const slideUpFast = {
-        duration: 1850,
+        duration: 2050,
         delay: 75,
         easing: "ease-out",
         scale: 1,
-        distance: "8rem"
+        distance: "10rem"
     };
 
     const slideUpLittleDistance = {
-        duration: 1100,
+        duration: 1300,
         delay: 75,
         easing: "ease-out",
         scale: 1,
